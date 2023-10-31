@@ -8,21 +8,21 @@
  */
 int check_cycle(listint_t *list)
 {
-        listint_t *slow = list;
-        listint_t *fast = list;
+listint_t *slow = list;
+listint_t *fast = list;
 
-        if (!list)
-                return (0);
+if (!list)
+return (0);
 
-        while (slow && fast && fast->next)
-        {
-                slow = slow->next;
-                fast = fast->next->next;
-                if (slow == fast)
-                        return (1);
-        }
+while (slow && fast && fast->next)
+{
+slow = slow->next;
+fast = fast->next->next;
+if (slow == fast)
+return (1);
+}
 
-        return (0);
+return (0);
 }
 root@e024474929d2:~/alx-higher_level_programming/0x00-python-hello_world# cat lists.h
 #ifndef LISTS_H
@@ -40,8 +40,8 @@ root@e024474929d2:~/alx-higher_level_programming/0x00-python-hello_world# cat li
  */
 typedef struct listint_s
 {
-        int n;
-        struct listint_s *next;
+int n;
+struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
