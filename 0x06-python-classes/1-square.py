@@ -1,8 +1,17 @@
 #!/usr/bin/python3
-"""Square class definition"""
+"""define an object name Square."""
 
 
 class Square:
+    """ object Square [class]. """
+
     def __init__(self, size):
-        """ a constractor"""
+        """ initialize method.
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+
+        """ instance attribute
+        """
         self.__size = size

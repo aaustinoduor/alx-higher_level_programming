@@ -1,59 +1,38 @@
 #!/usr/bin/python3
-"""class Defination Square"""
 
+"""
 
+"""
+
+"""
+
+"""
 class Square:
-    """
-    Attributes:
-        __size (int): size of a side of the square
-    """
-    def __init__(self, size=0):
-        """initializes the square
-        Args:
-            size (int): size of a side of the square
-        Returns:
-            None
-        """
-        self.size = size
 
-    def area(self):
-        """a method tat calculates the square's area
-        Returns:
-            The area of the square
-        """
-        return (self.__size) ** 2
+    def __init__(self, size=0) -> None:
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
+
+        else:
+            self._size = size
+
+    def area(self) -> int:
+        return self._size * self._size
+
+    def my_print(self):
+        if self._size == 0:
+            print()
+
+        else:
+            print("#" * self._size)
 
     @property
     def size(self):
-        """getter of __size
-        Returns:
-            The size of the square
-        """
-        return self.__size
+        return self._size
 
     @size.setter
     def size(self, value):
-        """setter of __size
-        Args:
-            value (int): size of a side of the square
-        Returns:
-            None
-        """
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        else:
-            if value < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = value
-
-    def my_print(self):
-        """ a method prints the square
-        Returns:
-            None
-        """
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__size):
-            print("".join(["#" for j in range(self.__size)]))
+        self._size = value
