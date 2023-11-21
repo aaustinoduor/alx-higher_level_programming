@@ -4,5 +4,8 @@
 
 """
 
+
 class Square:
+    """
+    """
     pass
