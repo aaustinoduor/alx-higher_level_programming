@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 type
 isinstance
+=======
+isinstance
+>>>>>>> 3dbb5f962605521b23a9c810c6b4ed84c0eaec31
