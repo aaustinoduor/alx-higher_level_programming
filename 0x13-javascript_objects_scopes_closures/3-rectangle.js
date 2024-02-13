@@ -13,9 +13,9 @@ class Rectangle {
       for (let b = 0; b < this.width; b++) {
         r += 'X';
       }
-      console.log(s);
+      console.log(r);
     }
   }
 }
 
-module.exports = rectangle;
+module.exports = Rectangle;

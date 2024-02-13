@@ -7,11 +7,11 @@ class Square extends SquareP {
       c = 'X';
     }
     for (let a = 0; a < this.height; a++) {
-      let r = '';
+      let s = '';
       for (let b = 0; b < this.width; b++) {
-        r += c;
+        s += c;
       }
-      console.log(r);
+      console.log(s);
     }
   }
 }
