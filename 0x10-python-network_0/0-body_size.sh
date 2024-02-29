@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL - displays the size
-curl -sD - "$1" | grep Content-Length | cut -d " " -f 2
+# Send request using curl and retrieve body size
+curl -sI "$1" | grep -i "content-length" | awk '{print $2}'
