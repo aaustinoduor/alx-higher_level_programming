@@ -44,8 +44,7 @@ by _Guillaume_
 * [x] 9. Catch me if you can!
 
 ## Developer
-Javier Andrés Garzón Patarroyo
-- [website](https://tecnoayuda.co/)
+
+Austie Oduor
 
 :man_technologist: :books: :computer: :globe_with_meridians:i
-
