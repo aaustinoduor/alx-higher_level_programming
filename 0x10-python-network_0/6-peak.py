@@ -1,24 +1,27 @@
 #!/usr/bin/python3
 # function that finds a peak in a list of unsorted integers.
 
-
-def aux(list_of_integers, first, last):
-    """ recursive auxiliary function """
-    x = last - first
-    if x == 1:
-        if list_of_integers[first] > list_of_integers[last]:
-            return first
-        else:
-            return last
-    middle = first + x // 2
-    if list_of_integers[middle] < list_of_integers[middle + 1]:
-        return aux(list_of_integers, middle, last)
-    return aux(list_of_integers, first, middle)
-
-
 def find_peak(list_of_integers):
-    """ function that finds a peak in a list of unsorted integers """
-    if len(list_of_integers) == 0:
+    """
+    Finds a peak in a list of unsorted integers.
+
+    Args:
+    - list_of_integers: List of integers
+
+    Returns:
+    - Peak element if found, None otherwise
+    """
+    if not list_of_integers:
         return None
-    return list_of_integers[aux(
-        list_of_integers, 0, len(list_of_integers) - 1)]
+
+    left = 0
+    right = len(list_of_integers) - 1
+
+    while left < right:
+        mid = (left + right) // 2
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            left = mid + 1
+        else:
+            right = mid
+
+    return list_of_integers[left]
