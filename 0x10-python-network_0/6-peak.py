@@ -22,3 +22,4 @@ def find_peak(list_of_integers):
         return None
     return list_of_integers[aux(
         list_of_integers, 0, len(list_of_integers) - 1)]
+
