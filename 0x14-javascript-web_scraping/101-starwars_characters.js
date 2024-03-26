@@ -6,7 +6,7 @@ const movieId = process.argv[2];
 
 const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
 
-//  the 'request' module to perform HTTP GET request to Star Wars API URL.
+//  'request' module to perform HTTP GET request to Star Wars API URL.
 request(apiUrl, function (error, response, body) {
   // check if there was no error during HTTP request
   if (!error && response.statusCode === 200) {
@@ -24,7 +24,7 @@ request(apiUrl, function (error, response, body) {
             // resolve promise with name of character.
             resolve(characterData.name);
           } else {
-            // reject promise with error message if  there was an error during HTTP request
+            // Reject promise with error message if  there was error during HTTP request
             reject(new Error(`Error fetching character data: ${charError}`));
           }
         });
@@ -42,4 +42,3 @@ request(apiUrl, function (error, response, body) {
     console.error('Error fetching movie data:', error);
   }
 });
-}

@@ -9,7 +9,7 @@ request(apiUrl, function (error, response, body) {
   if (!error && response.statusCode === 200) {
     const movieData = JSON.parse(body);
 
-    console.log(`Characters of "${movieData.title}":`);
+    console.log(`characters of "${movieData.title}":`);
 
     movieData.characters.forEach((characterUrl) => {
       request(characterUrl, function (charError, charResponse, charBody) {
@@ -18,11 +18,11 @@ request(apiUrl, function (error, response, body) {
 
           console.log(characterData.name);
         } else {
-          console.error('Error fetching character data:', charError);
+          console.error('error fetching character data:', charError);
         }
       });
     });
   } else {
-    console.error('Error fetching movie data:', error);
+    console.error('error fetching movie data:', error);
   }
 });
