@@ -15,7 +15,7 @@ let promise = new Promise(function (resolve, reject) {
       grant_type: 'client_credentials'
     }
   };
-  request.post(options, function (error, body, response) {
+  request.post(options, function (error, response, body) {
     if (!error) {
       resolve(JSON.parse(body).access_token);
     }
